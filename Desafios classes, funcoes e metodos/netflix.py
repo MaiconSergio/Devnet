@@ -1,4 +1,5 @@
 class Netflix:
+    #método com parametros inicias e se o plano não estiver na lista de "listas planos" ele vai exibir um erro
     def __init__(self, nome, email, plano):
         self.nome = nome
         self.email = email
@@ -9,14 +10,14 @@ class Netflix:
         else:
             print(f"bem vindo {nome}")
         
-
+#metodo com função de mudar o plano 
     def mudar_plano(self, novo_plano):
             if novo_plano in self.lista_planos:
              self.plano = novo_plano
             else:
                 print("plano invalido")
 
-
+# metodo com função de assistir o filme conforme o plano.
     def ver_filme(self, filme, plano_filme):
         if self.plano == plano_filme:
             print(f"ver filme {filme}")
