@@ -1,33 +1,33 @@
 from netmiko import ConnectHandler
+import textfsm
 
+# Carregar o modelo TextFSM
+with open("template.txt", 'r') as template_file:
+    template = textfsm.TextFSM(template_file)
 
-#Detalhes do equipamento
+# Detalhes do equipamento
 device = {
     'device_type': 'cisco_ios',
     'ip': '192.168.1.100',
     'username': 'cisco',
     'password': 'cisco',
-    'port' : 22, #porta default do ssh
-    'secret': '', #opcional em caso de um enable secret
-    'verbose': True #opcional, definido como true para logs detalhadas
+    'port' : 22, # Porta padrão do SSH
+    'secret': '', # Opcional, em caso de um "enable secret"
+    'verbose': True # Opcional, definido como True para logs detalhados
 }
 
-#criando a conexão
+# Criando a conexão
 connection = ConnectHandler(**device)
 
-#executando o comando e retornando a saida
-#output é uma variavel que está sendo armazenado o "connection" + função e depois o comando desejado
-#use_textfsm=true (ele transforma o comando em uma lista json)
-output = connection.send_command('Show ip int brief', use_textfsm =True)
+# Executando o comando e obtendo a saída
+output = connection.send_command('show ip int brief')
 
-#encerrando a conexão
+# Usando o modelo TextFSM para analisar a saída
+parsed_results = template.ParseText(output)
+
+# Encerrando a conexão
 connection.disconnect()
 
-#mostrando o comando na tela
-print(output)
-
-#printando o entry in output
-#for entry in output:
-   # print(entry)
-
-
+# Mostrando os resultados analisados
+for result in parsed_results:
+    print(result)
