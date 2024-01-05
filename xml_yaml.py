@@ -4,6 +4,7 @@ tree = ET.parse('networking_config.xml')
 root = tree.getroot()
 
 network = {"routers": []}
+#comentario novo
 
 for router in root.findall('router'):   
     router_data = {
