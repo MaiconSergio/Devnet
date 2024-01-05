@@ -4,7 +4,7 @@ tree = ET.parse('networking_config.xml')
 root = tree.getroot()
 
 network = {"routers": []}
-#comentario novo
+#comentario
 
 for router in root.findall('router'):   
     router_data = {
@@ -20,6 +20,6 @@ for router in root.findall('router'):
         ]
     }
     network['routers'].append(router_data)
-# Converter os dados em YAML e salvar
+# Converter os dados em YAML e salvars
 with open('networking_config.yaml', 'w') as yaml_file:
     yaml.dump(network, yaml_file, default_flow_style=False)
