@@ -1,0 +1,235 @@
+ * Serving Flask app "password-evolution" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+  File "password-evolution.py", line 69
+    app.run(host='0.0.0.0', port=5000, ssl_context='adhoc
+                                                        ^
+SyntaxError: EOL while scanning string literal
+ * Serving Flask app "password-evolution" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [03/Jun/2024 21:00:42] "[37mPOST /signup/v1 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [03/Jun/2024 21:06:01] "[37mPOST /signup/v1 HTTP/1.1[0m" 200 -
+[2024-06-03 21:06:24,554] ERROR in app: Exception on /login/v1 [POST]
+Traceback (most recent call last):
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "password-evolution.py", line 61, in login_v1
+    if verify_plain(request.form['username'], request.form['password']):
+  File "password-evolution.py", line 52, in verify_plain
+    return record[0] == password
+NameError: name 'record' is not defined
+127.0.0.1 - - [03/Jun/2024 21:06:24] "[35m[1mPOST /login/v1 HTTP/1.1[0m" 500 -
+[2024-06-03 21:07:56,767] ERROR in app: Exception on /login/v1 [POST]
+Traceback (most recent call last):
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "password-evolution.py", line 61, in login_v1
+    if verify_plain(request.form['username'], request.form['password']):
+  File "password-evolution.py", line 52, in verify_plain
+    return record[0] == password
+NameError: name 'record' is not defined
+127.0.0.1 - - [03/Jun/2024 21:07:56] "[35m[1mPOST /login/v1 HTTP/1.1[0m" 500 -
+[2024-06-03 21:11:17,238] ERROR in app: Exception on /login/v1 [POST]
+Traceback (most recent call last):
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "password-evolution.py", line 61, in login_v1
+    if verify_plain(request.form['username'], request.form['password']):
+  File "password-evolution.py", line 52, in verify_plain
+    return record[0] == password
+NameError: name 'record' is not defined
+127.0.0.1 - - [03/Jun/2024 21:11:17] "[35m[1mPOST /login/v1 HTTP/1.1[0m" 500 -
+127.0.0.1 - - [03/Jun/2024 21:11:49] "[37mPOST /signup/v1 HTTP/1.1[0m" 200 -
+[2024-06-03 21:12:03,708] ERROR in app: Exception on /login/v1 [POST]
+Traceback (most recent call last):
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "password-evolution.py", line 61, in login_v1
+    if verify_plain(request.form['username'], request.form['password']):
+  File "password-evolution.py", line 52, in verify_plain
+    return record[0] == password
+NameError: name 'record' is not defined
+127.0.0.1 - - [03/Jun/2024 21:12:03] "[35m[1mPOST /login/v1 HTTP/1.1[0m" 500 -
+[2024-06-03 21:15:11,001] ERROR in app: Exception on /login/v1 [POST]
+Traceback (most recent call last):
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "password-evolution.py", line 61, in login_v1
+    if verify_plain(request.form['username'], request.form['password']):
+  File "password-evolution.py", line 52, in verify_plain
+    return record[0] == password
+NameError: name 'record' is not defined
+127.0.0.1 - - [03/Jun/2024 21:15:11] "[35m[1mPOST /login/v1 HTTP/1.1[0m" 500 -
+[2024-06-03 21:18:24,062] ERROR in app: Exception on /login/v1 [POST]
+Traceback (most recent call last):
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "password-evolution.py", line 61, in login_v1
+    if verify_plain(request.form['username'], request.form['password']):
+  File "password-evolution.py", line 52, in verify_plain
+    return records[0] == password
+NameError: name 'record' is not defined
+127.0.0.1 - - [03/Jun/2024 21:18:24] "[35m[1mPOST /login/v1 HTTP/1.1[0m" 500 -
+[2024-06-03 21:19:06,901] ERROR in app: Exception on /login/v1 [POST]
+Traceback (most recent call last):
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "password-evolution.py", line 61, in login_v1
+    if verify_plain(request.form['username'], request.form['password']):
+  File "password-evolution.py", line 52, in verify_plain
+    return records[0] == password
+NameError: name 'record' is not defined
+127.0.0.1 - - [03/Jun/2024 21:19:06] "[35m[1mPOST /login/v1 HTTP/1.1[0m" 500 -
+ * Serving Flask app "password-evolution" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [03/Jun/2024 21:21:09] "[37mPOST /login/v1 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [03/Jun/2024 21:22:44] "[37mPOST /login/v1 HTTP/1.1[0m" 200 -
+ * Serving Flask app "password-evolution" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [04/Jun/2024 00:16:56] "[37mPOST /signup/v1 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 00:17:00] "[37mPOST /signup/v1 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 00:17:08] "[37mPOST /signup/v1 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 00:17:22] "[37mPOST /login/v1 HTTP/1.1[0m" 200 -
+username:  testelab password:  mytestlab
+  File "password-evolution.py", line 82
+    hash_value=
+              ^
+SyntaxError: invalid syntax
+  File "password-evolution.py", line 82
+    hash_value =
+               ^
+SyntaxError: invalid syntax
+ * Serving Flask app "password-evolution" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [04/Jun/2024 00:49:26] "[37mPOST /signup/v2 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 00:49:52] "[37mPOST /signup/v2 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 00:50:19] "[31m[1mPOST /signup/v2 HTTP/1.1[0m" 400 -
+127.0.0.1 - - [04/Jun/2024 00:50:21] "[31m[1mPOST /signup/v2 HTTP/1.1[0m" 400 -
+127.0.0.1 - - [04/Jun/2024 00:50:26] "[37mPOST /signup/v2 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 00:50:38] "[37mPOST /signup/v2 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 00:50:50] "[37mPOST /signup/v2 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 00:55:25] "[37mPOST /login/v2 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 00:55:40] "[37mPOST /signup/v2 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 00:55:50] "[37mPOST /login/v2 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 00:56:03] "[37mPOST /login/v2 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 00:56:13] "[37mPOST /signup/v2 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 00:56:56] "[37mPOST /signup/v2 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 00:57:07] "[37mPOST /login/v2 HTTP/1.1[0m" 200 -
+username:  rick password:  samepassword hash:  3cb06ee4ccfd3bf41203f245efcfa67a9a3574647977fda406ba6376ec8269fa
+username:  allan password:  samepassword hash:  3cb06ee4ccfd3bf41203f245efcfa67a9a3574647977fda406ba6376ec8269fa
+username:  dave password:  samepassword hash:  3cb06ee4ccfd3bf41203f245efcfa67a9a3574647977fda406ba6376ec8269fa
+ * Serving Flask app "password-evolution" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [04/Jun/2024 00:57:57] "[37mPOST /login/v2 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 00:58:13] "[37mPOST /signup/v2 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 00:58:33] "[37mPOST /login/v2 HTTP/1.1[0m" 200 -
+username:  maicon password:  password2 hash:  6cf615d5bcaac778352a8f1f3360d23f02f34ec182e259897fd6ce485d7870d4
+ * Serving Flask app "password-evolution" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [04/Jun/2024 01:00:19] "[37mPOST /login/v2 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 01:00:31] "[37mPOST /signup/v2 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 01:00:34] "[37mPOST /login/v2 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 01:00:40] "[37mPOST /signup/v2 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 01:00:58] "[37mPOST /login/v2 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 01:02:05] "[37mPOST /signup/v2 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 01:02:11] "[37mPOST /login/v2 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 01:02:26] "[37mPOST /signup/v2 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 01:02:30] "[37mPOST /login/v2 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [04/Jun/2024 01:03:14] "[37mPOST /login/v2 HTTP/1.1[0m" 200 -
