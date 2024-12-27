@@ -9,3 +9,6 @@ squared_list = ListCalculator.square(number_list)
 # Print the result
 print("Original List:", number_list)
 print("Squared List:", squared_list)
+
+
+#teste
